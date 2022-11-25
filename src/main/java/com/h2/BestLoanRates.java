@@ -16,6 +16,13 @@ public class BestLoanRates
 
     public static float getRates(int loanTermInYears)
     {
-        return 0.0f;
+        if(bestRates.containsKey(loanTermInYears))
+        {
+            return bestRates.get(loanTermInYears);
+        }
+        else
+        {
+            return 0.0f;
+        }
     }
 }
