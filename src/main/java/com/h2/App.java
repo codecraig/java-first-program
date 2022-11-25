@@ -11,11 +11,13 @@ public class App
         System.out.println( "Hello World!" );
     }
 
-    public static int doubleTheNumber(int number) {
+    public static int doubleTheNumber( int number )
+    {
         return number*2;
     }
 
-    private static int add(int[] numbers) {
+    private static int add( int[] numbers )
+    {
         var sum = 0;
         for ( int i = 0; i < numbers.length; i++) {
             sum += numbers[i];
