@@ -5,12 +5,23 @@ import java.util.Scanner;
 
 public class BestLoanRates
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println( "Enter your name" );
+        System.out.println("Enter your name");
         String name = scanner.nextLine();
-        System.out.println(String.format("Hello %s", name));
+        System.out.println("Hello " + name);
+        System.out.println("Enter the loan term (in years)");
+        int loanTermInYears = scanner.nextInt();
+        float bestRates = getRates(loanTermInYears);
+        if(bestRates == 0.0f)
+        {
+            System.out.println("No available rates for term: " + loanTermInYears + "years");
+        }
+        else
+        {
+            System.out.println("Best Available Rate: " + getRates(loanTermInYears) + "%");
+        }
     }
     public static final Map<Integer, Float> bestRates = Map.of(1, 5.50f, 2, 3.45f, 3, 2.67f);
 
