@@ -20,4 +20,14 @@ public class SavingsCalculator
         }
         return sum;
     }
+
+    private float sumOfDebits()
+    {
+        float sum = 0.0f;
+        for(int i = 0; i < debits.length; i++)
+        {
+            sum += debits[i];
+        }
+        return sum;
+    }
 }
