@@ -15,4 +15,18 @@ public class Utilities
         }
         return out;
     }
+
+    public static int getIntValue(String in)
+    {
+        int out = Integer.MIN_VALUE;
+        try
+        {
+            out = Integer.parseInt(in);
+        }
+        catch(NumberFormatException e)
+        {
+            throw new IllegalArgumentException(in + " cannot be converted into a 'int' value. Exiting program.");
+        }
+        return out;
+    }
 }
